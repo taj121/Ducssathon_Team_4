@@ -1,9 +1,9 @@
 
-public class Recipie {
+public class Recipe {
 	private int numberTimesCooked;
 	private String recipieURL;
 	
-	Recipie(String url){
+	Recipe(String url){
 		this.recipieURL = url;
 		this.numberTimesCooked =0;
 	}
