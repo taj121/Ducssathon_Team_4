@@ -45,7 +45,7 @@ public class link_gen {
 			}			
 			if (noSelect)
 			{
-				JOptionPane.showMessageDialog(null, "Alright, bye.");
+				JOptionPane.showMessageDialog(null, "Alright, bye you fuck.");
 				System.exit(0);
 			}
 			
