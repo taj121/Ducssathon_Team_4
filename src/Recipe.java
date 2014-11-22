@@ -5,7 +5,7 @@ public class Recipe {
 	
 	Recipe(String url){
 		this.recipieURL = url;
-		this.numberTimesCooked =0;
+		this.numberTimesCooked =1;
 	}
 
 	public int getNumberTimesCooked() {
