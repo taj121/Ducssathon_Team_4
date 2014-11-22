@@ -16,16 +16,23 @@ public class link_gen {
 
 		public static void main(String[] args) throws Exception
 		{
-			String[] urlArray = new String[3];
-			String[] infoArray = new String[3];
+			String[] urlArray = new String[6];
+			String[] infoArray = new String[6];
 			
 			urlArray[0] = ("http://www.cookstr.com/recipes/papaya-and-arugula-salad");
 			urlArray[1] = ("http://www.cookstr.com/recipes/pasta-primavera-2");
 			urlArray[2] = ("http://www.cookstr.com/recipes/french-toast-with-bananas");
+			urlArray[3] = ("http://www.cookstr.com/recipes/vegetable-chili");
+			urlArray[4] = ("http://www.cookstr.com/recipes/grilled-eggplant-with-feta-mint-and-chilli");
+			urlArray[5] = ("http://www.cookstr.com/recipes/old-fashioned-raspberry-tart");
+			
 				
 			infoArray[0] =("Course: Main Course\nTotal Time: Under 2 Hours\nSkill Level: Easy\nCost: Inexpensive");
 			infoArray[1] =("Course: Main Course\nTotal Time: Under 2 Hours\nSkill Level: Easy\nCost: Inexpensive");
-			infoArray[2] =("Course: Main Course\nTotal Time: Under 30 Minutes\nSkill Level: Easy\nCost: Inexpensive");
+			infoArray[2] =("Course: Dessert\nTotal Time: Under 30 Minutes\nSkill Level: Easy\nCost: Inexpensive");
+			infoArray[3] =("Course: Main Course\nTotal Time: Under 4 Hours\nSkill Level: Moderate\nCost: Inexpensive");
+			infoArray[4] =("Course: Tapas\nTotal Time: Under 30 Minutes\nSkill Level: Easy\nCost: Inexpensive");
+			infoArray[5] =("Course: Dessert\nTotal Time: Under 1 Hour\nSkill Level: Moderate\nCost: Moderate");
 			
 			PointsTrack myPoints = new PointsTrack();
 			JFrame frameStart = new JFrame();
@@ -53,10 +60,7 @@ public class link_gen {
 						null, select2, select2[1]);			
 				
 				if (userInputSelect2 == 0)
-				{
-//					Desktop desktop=Desktop.getDesktop();
-//					desktop.browse(new URI("http://www.cookstr.com/searches/surprise"));
-					
+				{					
 					Random rand = new Random();
 
 					
@@ -83,6 +87,9 @@ public class link_gen {
 								null, select3, select3[1]);	
 						if(userInputSelect3 !=1){
 							myPoints.getUpdatedPointsForCooking(url);
+							Desktop desktop=Desktop.getDesktop();
+							desktop.browse(new URI(url));
+							
 							break;
 						}
 					}
