@@ -12,7 +12,7 @@ public class LinkParser {
 	public String parse() {
         int sep = unparsed.lastIndexOf(separator);
         parsed = unparsed.substring(sep + 1);
-		parsed = parsed.replace("-" , " ");
+		parsed = parsed.replace("-", " ");
 		return parsed.toUpperCase();
     }
 	
