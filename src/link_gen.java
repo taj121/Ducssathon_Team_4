@@ -59,16 +59,33 @@ public class link_gen {
 					
 					Random rand = new Random();
 
-					int n = rand.nextInt(2);
 					
-					String url = urlArray[n];
-					String info = infoArray[n];
 					
-					LinkParser parser = new LinkParser(url);
-					JOptionPane.showMessageDialog(null, "This is a lovely recipe.\n" + parser.parse()
-							+ "\n\nInfo" + info
-							+ "\n\nLink to Recipe: " + url);
-					myPoints.getUpdatedPointsForCooking(url);
+					while(true){
+
+						int n = rand.nextInt(2);
+
+						String url = urlArray[n];
+						String info = infoArray[n];
+						LinkParser parser = new LinkParser(url);
+						JFrame frame3 = new JFrame();
+						Object[] select3 = { "I like this one", "Give me a different one"};
+	//					JOptionPane.showMessageDialog(null, "This is a lovely recipe.\n" + parser.parse()
+	//							+ "\n\nInfo" + info
+	//							+ "\n\nLink to Recipe: " + url);
+						int userInputSelect3 = JOptionPane.showOptionDialog(frame3,
+								("This is a lovely recipe.\n" + parser.parse()
+										+ "\n\nInfo" + info
+										+ "\n\nLink to Recipe: " + url),
+										"Recipe Generator",
+								JOptionPane.YES_NO_OPTION,
+								JOptionPane.QUESTION_MESSAGE,
+								null, select3, select3[1]);	
+						if(userInputSelect3 !=1){
+							myPoints.getUpdatedPointsForCooking(url);
+							break;
+						}
+					}
 					
 				}
 				if (userInputSelect2 == 1)
