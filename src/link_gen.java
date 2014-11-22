@@ -17,11 +17,15 @@ public class link_gen {
 		public static void main(String[] args) throws Exception
 		{
 			String[] urlArray = new String[3];
+			String[] infoArray = new String[3];
 			
 			urlArray[0] = ("http://www.cookstr.com/recipes/papaya-and-arugula-salad");
 			urlArray[1] = ("http://www.cookstr.com/recipes/pasta-primavera-2");
 			urlArray[2] = ("http://www.cookstr.com/recipes/french-toast-with-bananas");
 				
+			infoArray[0] =("Course: Main Course\nTotal Time: Under 2 Hours\nSkill Level: Easy\nCost: Inexpensive");
+			infoArray[1] =("Course: Main Course\nTotal Time: Under 2 Hours\nSkill Level: Easy\nCost: Inexpensive");
+			infoArray[2] =("Course: Main Course\nTotal Time: Under 30 Minutes\nSkill Level: Easy\nCost: Inexpensive");
 			
 			PointsTrack myPoints = new PointsTrack();
 			JFrame frameStart = new JFrame();
@@ -57,10 +61,13 @@ public class link_gen {
 
 					int n = rand.nextInt(2);
 					
-					String url = urlArray[n]; 
+					String url = urlArray[n];
+					String info = infoArray[n];
 					
 					LinkParser parser = new LinkParser(url);
-					JOptionPane.showMessageDialog(null, "This is a lovely recipe.\n" + parser.parse() + "\nLink to Recipe: " + url);
+					JOptionPane.showMessageDialog(null, "This is a lovely recipe.\n" + parser.parse()
+							+ "\n\nInfo" + info
+							+ "\n\nLink to Recipe: " + url);
 					myPoints.getUpdatedPointsForCooking(url);
 					
 				}
@@ -72,7 +79,7 @@ public class link_gen {
 			}			
 			if (noSelect)
 			{
-				JOptionPane.showMessageDialog(null, "Alright, bye spa.");
+				JOptionPane.showMessageDialog(null, "Alright, bye friend.");
 				System.exit(0);
 			}
 			
