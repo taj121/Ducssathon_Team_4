@@ -67,7 +67,7 @@ public class link_gen {
 					
 					while(true){
 
-						int n = rand.nextInt(2);
+						int n = rand.nextInt(6);
 
 						String url = urlArray[n];
 						String info = infoArray[n];
