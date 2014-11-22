@@ -1,5 +1,6 @@
 
 public class LinkParser {
+	
 	String unparsed = "";
 	String parsed = "";
 	private char separator = '/';
@@ -7,6 +8,7 @@ public class LinkParser {
 	public LinkParser(String URL) {
 		unparsed = URL;
 	}
+	
 	public String parse() {
         int sep = unparsed.lastIndexOf(separator);
         parsed = unparsed.substring(sep + 1);
