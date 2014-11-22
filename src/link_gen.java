@@ -25,6 +25,7 @@ public class link_gen {
 			
 			PointsTrack myPoints = new PointsTrack();
 			JFrame frameStart = new JFrame();
+			while(true){
 			Object[] select = { "Yes Please", "No Thanks" };
 			int userInputSelect = JOptionPane.showOptionDialog(frameStart,
 					"Would you like to do food things?",
@@ -60,6 +61,7 @@ public class link_gen {
 					
 					LinkParser parser = new LinkParser(url);
 					JOptionPane.showMessageDialog(null, "This is a lovely recipe.\n" + parser.parse() + "\nLink to Recipe: " + url);
+					myPoints.getUpdatedPointsForCooking(url);
 					
 				}
 				if (userInputSelect2 == 1)
@@ -74,6 +76,7 @@ public class link_gen {
 				System.exit(0);
 			}
 			
+		}
 		}
 
 		

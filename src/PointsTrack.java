@@ -31,19 +31,19 @@ public class PointsTrack {
 	private int calculatePoints(int timesCooked){
 		int pointsGained = 0;
 		switch (timesCooked){
-		case 1:
+		case 0:
 			pointsGained = 10;
 			break;
-		case 2:
+		case 1:
 			pointsGained = 8;
 			break;
-		case 3:
+		case 2:
 			pointsGained = 6;
 			break;
-		case 4:
+		case 3:
 			pointsGained = 4;
 			break;
-		case 5:
+		case 4:
 			pointsGained = 2;
 			break;
 		default:
