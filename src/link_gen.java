@@ -9,6 +9,7 @@ public class link_gen {
 
 		public static void main(String[] args) throws Exception
 		{
+			PointsTrack myPoints = new PointsTrack();
 			JFrame frameStart = new JFrame();
 			Object[] select = { "Yes Please", "No Thanks" };
 			int userInputSelect = JOptionPane.showOptionDialog(frameStart,
@@ -39,7 +40,7 @@ public class link_gen {
 				}
 				if (userInputSelect2 == 1)
 				{
-					JOptionPane.showMessageDialog(null, "Look at all your lovely points.");
+					JOptionPane.showMessageDialog(null, "Look at all your lovely points.\n" + myPoints.getPoints());
 				}	
 				
 			}			
